@@ -3,12 +3,12 @@
 metadata:
   # site_url should match your full production URL
   site_url: 'https://main--preeminent-bublanina-94c1b4.netlify.app/'
-  site_title: xArch Studdio
+  site_title: xArch Studio
   # site subtitles are optional
   site_subtitle_1: Project Portfolio
   site_subtitle_2: Christchurch, CAN
   # Home page description, accepts markdown
-  site_description: >
+  site_description: |
     xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs. Contact us here:
     [bigDogArchitect](https://www.linkedin.com/in/mike-walker-817b1038/)
   # footer contact email
