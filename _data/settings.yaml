@@ -9,11 +9,12 @@ metadata:
   site_subtitle_2: Christchurch, CAN
   # Home page description, accepts markdown
   site_description: >
-    xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs
+    xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs. Contact us here:
+    [bigDogArchitect](https://www.linkedin.com/in/mike-walker-817b1038/)
   # footer contact email
   site_email: bo0yswbrp@mozmail.com
   # footer social link (the social title is defined in the i18n section)
-  site_social_url: 'https://github.com/Michael-Walker-NZ/halide'
+  site_social_url: 'https://www.linkedin.com/in/mike-walker-817b1038/'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
   # optional PNG image used for sharing/bookmark icons
@@ -81,7 +82,7 @@ i18n:
   # any valid ISO language code e.g. en or en-US
   site_language: en
   # single-language translations can be defined here
-  site_social_title: GitHub
+  site_social_title: LinkedIn
 # Internal config, hidden from Tina CMS
 config:
   # define responsive image widths for project thumbnails and large images
