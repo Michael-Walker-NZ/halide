@@ -9,8 +9,9 @@ metadata:
   site_subtitle_2: Christchurch, CAN
   # Home page description, accepts markdown
   site_description: |
-    xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs. Contact us here:
-    [bigDogArchitect](https://www.linkedin.com/in/mike-walker-817b1038/)
+    xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs. 
+    
+    Contact us here: [bigDogArchitect](https://www.linkedin.com/in/mike-walker-817b1038/)
   # footer contact email
   site_email: bo0yswbrp@mozmail.com
   # footer social link (the social title is defined in the i18n section)
@@ -24,7 +25,7 @@ metadata:
   # home page SEO fields
   seo:
     # <title> tag
-    site_title: xArch Studio - minimalist arch studio
+    site_title: xArch Studio - minimalist studio
     # meta description
     site_description: >-
       xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs
