@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 section: home
-permalink: "/index.html"
+permalink: "/orig.html"
 ---
 <article>
 
@@ -15,18 +15,8 @@ permalink: "/index.html"
 
   </header>
 
-    <div>
-    "some writing in here"
-    </div>
-
-
-  {% set projectList = collections.heritage | limit(settings.theme.theme_features.item_output_limit or 48) %}
+  {% set projectList = collections.projects | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectList.njk" %}
-
-
-
-
-
 
 </article>
 

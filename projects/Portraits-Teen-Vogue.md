@@ -4,7 +4,7 @@ title: 'Portraits, Teen Vogue'
 description: |
   Fashion portraits shot on location in Kiev, Ukraine.
 year: 2022
-position: 0
+position: 1
 images:
   - src: /assets/uploads/photo-1697396431622-6bfa6ce50f03.avif
     caption: Portrait 1
