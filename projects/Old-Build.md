@@ -12,7 +12,7 @@ images:
   - src: /assets/uploads/photo-1699213880412-01eddb3023ee.avif
     caption: jkkhkjhm
 date: 2023-11-10T12:28:51.623Z
-tags: heritage
+tags: residential
 ---
 An additional fictitious project description.
 

@@ -14,21 +14,108 @@ permalink: "/index.html"
     </div>
 
   </header>
+</article>
 
-    <div>
-    "some writing in here"
-    </div>
+<article class="pb--4">
 
+  <sl-carousel pagination navigation mouse-dragging loop autoplay id="slCarousel" style="--aspect-ratio:16/9;"> 
+  {# class="mxht"> #}
+    <sl-carousel-item>
+      <img
+        alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
+        src="/assets/images/Wwxg6PtHvK-1080.jpeg"
+      />
+    </sl-carousel-item>
+    <sl-carousel-item>
+      <img
+        alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
+        src="/assets/images/XYRmyBY5Q--1080.jpeg"
+      />
+    </sl-carousel-item>
+    <sl-carousel-item>
+      <img
+        alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
+        src="/assets/images/sr05clhPxe-1080.jpeg"
+      />
+    </sl-carousel-item>
 
+  </sl-carousel>
+
+  {# 
   {% set projectList = collections.heritage | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectList.njk" %}
-
-
-
-
-
+ 
+  {% set projectList = collections.projects | limit(settings.theme.theme_features.item_output_limit or 48) %}
+  {% include "components/projectList.njk" %}
+ #}
 
 </article>
 
+<div class="grid grid--description">
+<h2 class="grid--section-title">About //</h2>
+  <div class="grid__item--span-4 mw--readable markdown pb--4">
+  
+    <article>
+      
+
+      <p>Nathaniel Miller Architecture is a small architectural practice specializing in design and documentation of projects varying from the smallest alterations to complex & bespoke designs.</p>
+
+      <p>After graduating in 2007, Nathaniel spent 14 years working for several award-winning practices across the South Island including 9 years at Warren and Mahoney Architects. 
+      Project experience includes a wide variety of residential work from the smallest alterations to multi-unit apartments, townhouses and large bespoke designs such as Millbrook Resort. 
+      Other project experience includes Southern Cross Hospitals, Anglican Churches, Otago + Canterbury Universities and 3 years on the restoration of The Christchurch Townhall.</p>
+
+      <p>Nathaniel loves connecting with the story and people behind every project then embarking on the search for the best solution. He has built a reputation of completing projects with craft and clarity.</p>
+    </article>
+</div>
+{# </div>
+
+<div class="grid grid--description"> #}
+<h2 class="grid--section-title">Services //</h2>
+  <div class="grid__item--span-4 mw--readable markdown">
+    <article>
+      
+      <ul>· Design and documentation</ul>
+      <ul>· Residential - all types
+        <a href="/projects/residential"><span class="arrow arrow--right"></span></a>
+      </ul>
+      <ul>· Alterations and additions
+        <a href="/projects/alterations"><span class="arrow arrow--right"></span></a>
+      </ul>
+      <ul>· Commercial
+        <a href="/projects/commercial"><span class="arrow arrow--right"></span></a>
+      </ul>
+      <ul>· Thermal modelling</ul> 
+      <ul>· Sustainable design</ul>
+      <ul>· Rendering</ul>
+      <ul>· Resource and Building Consents</ul>
+      <ul>· Architectural project management (construction)</ul>
+
+    </article>
+</div>
+</div>
+
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}
+
+<style>
+  sl-carousel {
+    opacity: 0;
+  }
+
+  sl-carousel.ready {
+    opacity: 1;
+    transition: 0.25s opacity;
+  }
+</style>
+
+<script type="module">
+  await Promise.allSettled([
+    customElements.whenDefined('sl-carousel')
+  ]);
+
+  // Carousel is registered now! Add
+  // the `ready` class so the UI fades in.
+  {# document.sl-carousel.classList.add('ready'); #}
+  const elC = document.getElementById("slCarousel");
+  elC.classList.add('ready');
+</script>

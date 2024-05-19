@@ -1,5 +1,5 @@
 {
-  "name": "xArch_Studio",
+  "name": "xarchstudio",
   "version": "0.0.1",
   "description": "xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs",
   "scripts": {
@@ -37,5 +37,8 @@
     "netlify-plugin-csp-generator": "^1.6.1",
     "tinacms": "^1.5.28",
     "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.15.0"
   }
 }

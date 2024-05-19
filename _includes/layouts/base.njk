@@ -15,12 +15,20 @@
 		{% include "components/footer.njk" %}
 
 		{# Minify and output the core site JS #}
-		{% set js %}
-    	{% include "assets/js/global.js" %}
-			{% if settings.theme.theme_features.enable_dark_mode %}
-				{% include "assets/js/dark_mode.js" %}
-			{% endif %}
-  	{% endset %}
+			{% set js %}
+			{% include "assets/js/global.js" %}
+				{% if settings.theme.theme_features.enable_dark_mode %}
+					{% include "assets/js/dark_mode.js" %}
+				{% endif %}
+			{% endset %}
+
+		{# get web-c JS #}	
+			{% set sliderJS %}		
+    			{% if section == "home" %}
+					{% include "assets/js/test.js" %}
+				{% endif %}
+  			{% endset %}
+
  		<script>{{ js | jsmin | safe }}</script>
 
 		{# Fallback for image visibility when JS is unavailable #}
@@ -33,6 +41,8 @@
 			{% include "components/analytics.njk" %}
 		{% endif %}
 
-	</body>
+		<script>{{ sliderJS | safe }}</script>
+		
+		</body>
 
 </html>

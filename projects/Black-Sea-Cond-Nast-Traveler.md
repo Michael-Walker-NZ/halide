@@ -13,6 +13,7 @@ images:
   - src: /assets/uploads/photo-1699162591818-43b05012aec2.avif
     caption: Flowers on a building
 date: 2023-11-14T10:26:09.471Z
+tags: commercial
 ---
 An additional fictitious project description.
 

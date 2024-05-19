@@ -4,11 +4,35 @@
 
 		<a href="{{ '/' | url }}" class="grid__item link-nocolor">
       {# SEO: home page header title should be inside a h1 tag #}
-      {% if page.url == "/" %}
-				<h1><span class="site_title">{{ settings.metadata.site_title }}</span></h1>
+      {# {% if page.url == "/" %} #}
+				{# input logo image here #}
+				<div class="logo">
+				{% set params = 
+							{
+								"src": "/assets/uploads/NMA_Logo.jpg",
+								"alt": "Nathanial Miller Architecture",
+								"class": "logo",
+								"loadingType": "eager",
+								"viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 22vw, 60vw",
+								"outputWidths": [
+									settings.config.image_grid_width_sm,
+									settings.config.image_grid_width_md,
+									settings.config.image_grid_width_lg
+								],
+								"outputFormats": outputFormats,
+								"outputQualityJpeg": settings.images.jpeg.quality,
+								"outputQualityWebp": settings.images.webp.quality,
+								"outputQualityAvif": settings.images.avif.quality
+							}
+						%}
+
+						{# The image shortcode #}
+						{% generateImage params %}
+				</div>
+				{# <h1><span class="site_title">{{ settings.metadata.site_title }}</span></h1>
       {% else %}
         <span>{{ settings.metadata.site_title }}</span>
-      {% endif %}
+      {% endif %} #}
 		</a>
 
 		{% if settings.metadata.site_subtitle_1 %}
@@ -18,6 +42,21 @@
 		{% if settings.metadata.site_subtitle_2 %}
 			<span class="grid__item">{{ settings.metadata.site_subtitle_2 }}</span>
 		{% endif %}
+			<div class="grid_item">
+			</div>
+			<div class="grid_item grid__item--end">
+				<a href="{{ '/projects/residential' | url }}" class="nav" >
+					<span>Residential</span><span class="not-vis">&#x2192;</span>
+				</a>
+				<a href="{{ '/projects/alterations' | url }}" class="nav">
+					<span>Alterations</span><span class="not-vis">&#x2192;</span>
+				</a>
+				<a href="{{ '/projects/commercial' | url }}" class="nav">
+					<span>Commercial</span><span class="not-vis">&#x2192;</span>
+				</a>	
+			</div>	
+
+
 
 		{% if settings.theme.theme_features.enable_dark_mode %}
 
@@ -32,6 +71,7 @@
 						</svg>
 					</label>
 				</div>
+				
 			</div>
 
 		{% endif %}

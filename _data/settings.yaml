@@ -3,13 +3,13 @@
 metadata:
   # site_url should match your full production URL
   site_url: 'https://main--preeminent-bublanina-94c1b4.netlify.app/'
-  site_title: xArch Studio
+  site_title: Nathaniel Miller Architecture
   # site subtitles are optional
-  site_subtitle_1: Project Portfolio
-  site_subtitle_2: Christchurch, CAN
+  site_subtitle_1: 
+  site_subtitle_2: 
   # Home page description, accepts markdown
   site_description: |
-    xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs. 
+    NMA is a new, minimalist, architecutural studio for residential connoisseurs. 
     
     Contact us here: [bigDogArchitect](https://www.linkedin.com/in/mike-walker-817b1038/)
   # footer contact email
@@ -18,17 +18,18 @@ metadata:
   site_social_url: 'https://www.linkedin.com/in/mike-walker-817b1038/'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
+  # /assets/uploads/favicon.svg
   # optional PNG image used for sharing/bookmark icons
-  site_icon_png: ''
+  site_icon_png: /assets/uploads/favicon.png
   # add a GA4 ID to enable Google Analytics e.g. G-123456789
   site_ga4_id: ''
   # home page SEO fields
   seo:
     # <title> tag
-    site_title: xArch Studio - minimalist studio
+    site_title: NMA - noice architecture
     # meta description
     site_description: >-
-      xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs
+      Nathaniel Miller Architecture is a dynamic, minimalist, architecutural studio for residential connoisseurs
     # Adds a noindex <meta> tag on all site pages, be careful y'all!
     # Instead you can block indexing per-project with no_index: true
     no_index: false
@@ -49,13 +50,23 @@ theme:
     link_dark: '#ffffff'
   theme_typography:
     # font can be any variable Google Font name. Enter 'system' to use a system font stack
-    font: Overpass Mono
+    font: Cairo 
+    #Overpass Mono
     # can be any valid variable font weight value e.g. 415
-    font_weight: 400
+    font_weight: 200
     # adjust font_scale up/down to increase/decrease font size
     font_scale: 100
     # adjust line_height_scale up/down to increase/decrease line height
     line_height_scale: 100
+
+    # font Headings can be any variable Google Font name. Enter 'system' to use a system font stack
+    fontH: Cairo 
+    # can be any valid variable font weight value e.g. 415
+    fontH_weight: 700
+    # adjust font_scale up/down to increase/decrease font size
+    fontH_scale: 100
+
+
   theme_features:
     # enables the dark mode toggle and detects the user's dark mode preference
     enable_dark_mode: true

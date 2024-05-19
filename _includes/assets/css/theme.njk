@@ -13,6 +13,17 @@
   --font-scale: {{ settings.theme.theme_typography.font_scale or "100" }};
 	--line-height-scale: {{ settings.theme.theme_typography.line_height_scale or "100" }};
   --transition-time: {{ settings.theme.theme_features.transition_duration or "300" }}ms;
+
+--fontH:
+	{% if (settings.theme.theme_typography.fontH == "system" or settings.theme.theme_typography.fontH == "") %}
+		{{ settings.config.font_stack_system | safe }}
+	{% else %}
+		{{ settings.theme.theme_typography.fontH }}
+	{% endif %};
+  --fontH-weight: {{ settings.theme.theme_typography.font_weight or "400" }};
+  --fontH-scale: {{ settings.theme.theme_typography.font_scale or "100" }};
+
+
 }
 
 :root[dark] {

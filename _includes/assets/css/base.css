@@ -150,6 +150,12 @@ a:hover .hover-fade {
 	opacity: .75;
 }
 
+/*  Logo */
+
+.logo{
+	max-width: 250px;
+}
+
 /* Typography */
 
 .text--hide {
@@ -177,12 +183,19 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: calc(var(--font-size-base) * var(--font-scale) / 100);
 	font-weight: var(--font-weight);
 }
-h1{
-	text-decoration:underline 
+
+h1,h2,h3 {
+font-family: var(--fontH);
+font-size: calc(var(--fontH-size-base) * var(--font-scale) / 100);
+font-weight: var(--fontH-weight);
 }
+/* h1{
+	text-decoration:underline 
+} */
+/* 
 .site_title{
 	font-weight:500
-}
+} */
 
 p {
 	margin-bottom: var(--space);
@@ -199,6 +212,55 @@ header .markdown * {
 img {
 	width: 100%;
 	height: auto;
+}
+
+h1 {
+	font-size: 1.467rem;
+}
+
+h2 {
+	font-size: 1.383rem;
+}
+
+h3 {
+	font-size: 1.296rem;
+}
+
+h4 {
+	font-size: 1.215rem;
+}
+
+h5 {
+	font-size: 1.138rem;
+}
+
+h6 {
+	font-size: 1.067rem;
+}
+
+/* spacing */
+
+article p:last-of-type{	
+	margin-bottom: 0;
+}
+
+.nav {
+	padding-right: calc(var(--space) * 1 );	
+}
+
+div a:last-of-type{	
+	padding-right: 0;
+}
+
+.not-vis{
+	display: inline;
+	font-family: Inter, sans-serif;
+	opacity: 0;
+}
+
+.nav:hover .not-vis{
+opacity: 1;
+transition: 0.25s opacity;
 }
 
 /* Navigational Arrows */
@@ -276,6 +338,12 @@ img {
 	.grid--description,
 	.grid--footer {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.grid--section-title{
+		display: flex;
+		justify-content: flex-end;
+		grid-column: 2;
 	}
 
 	.grid--footer {
@@ -393,3 +461,72 @@ img {
 	margin-bottom: calc(var(--space) * 8 );
 }
 
+/* shoelace style webC hidden */
+:not(:defined) {
+	visibility: hidden;
+  }
+/* carousel max-height */
+.mxht {
+	max-height:100lvh;
+}
+
+/* from https://layout-breakouts-builder.vercel.app/ */
+
+
+.page-layout > *, .full-width > * {
+	grid-column: content;
+  }
+  .page-layout, .full-width {
+  --minimum-content-padding: 0rem;
+  
+  /** TRACK WIDTHS **/
+  --full-max-width: 1fr;
+  --popout-max-width: 1400px;
+  --content-max-width: 1060px;
+  --inset-content-max-width: 840px;
+  
+  /** TRACK SIZES **/
+  --full: minmax( var(--minimum-content-padding), 1fr );
+  --popout: minmax( 0, calc( ( var(--popout-max-width) - var(--content-max-width)) * 0.5 ) );
+  --content: minmax( 0, calc( ( var(--content-max-width) - var(--inset-content-max-width)) * 0.5 ) );
+  --inset-content: min( var(--inset-content-max-width), 100% - var(--minimum-content-padding) * 2 );
+  
+  display: grid;
+  grid-template-columns: 
+	[full-start]
+	var(--full)
+	  [popout-start]
+	  var(--popout)
+		[content-start]
+		var(--content)
+		  [inset-content-start]
+		  var(--inset-content)
+		  [inset-content-end]
+		var(--content)
+		[content-end]
+	  var(--popout)
+	  [popout-end]
+	var(--full)
+	[full-end];
+  }
+  
+  /** CLASSES **/
+  .full { grid-column: full; }
+  .full-start { grid-column-start: full-start; }
+  .full-end { grid-column-end: full-end; }
+  
+  .popout { grid-column: popout; }
+  .popout-start { grid-column-start: popout-start; }
+  .popout-end { grid-column-end: popout-end; }
+  
+  .content { grid-column: content; }
+  .content-start { grid-column-start: content-start; }
+  .content-end { grid-column-end: content-end; }
+  
+  .inset-content { grid-column: inset-content; }
+  .inset-content-start { grid-column-start: inset-content-start; }
+  .inset-content-end { grid-column-end: inset-content-end; }
+  
+  .full-width { grid-column: full; }
+  .full-content, .full-content-nopad { grid-column: full; }
+  .full-content { padding-inline: var(--minimum-content-padding); }

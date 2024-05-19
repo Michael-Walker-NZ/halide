@@ -13,6 +13,7 @@ images:
   - src: /assets/uploads/395137527_10234156633364317_3163951133118126073_n.jpg
     caption: 3rd caption
 date: 2024-17-04T12:28:51.623Z
+tags: commercial
 ---
 An example project.
 
