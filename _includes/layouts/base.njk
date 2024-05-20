@@ -23,11 +23,11 @@
 			{% endset %}
 
 		{# get web-c JS #}	
-			{% set sliderJS %}		
+			{# {% set sliderJS %}		
     			{% if section == "home" %}
 					{% include "assets/js/test.js" %}
 				{% endif %}
-  			{% endset %}
+  			{% endset %} #}
 
  		<script>{{ js | jsmin | safe }}</script>
 
@@ -41,7 +41,7 @@
 			{% include "components/analytics.njk" %}
 		{% endif %}
 
-		<script>{{ sliderJS | safe }}</script>
+		{# <script>{{ sliderJS | safe }}</script> #}
 		
 		</body>
 
