@@ -186,7 +186,8 @@ h1,h2,h3,h4,h5,h6 {
 
 h1,h2,h3 {
 font-family: var(--fontH);
-font-size: calc(var(--fontH-size-base) * var(--font-scale) / 100);
+color: var(--color-textH);
+font-size: calc(var(--font-size-base) * var(--fontH-scale) / 100);
 font-weight: var(--fontH-weight);
 }
 /* h1{
@@ -245,7 +246,7 @@ article p:last-of-type{
 }
 
 .nav {
-	padding-right: calc(var(--space) * 1 );	
+	padding-right: calc(var(--space) / 2 );	
 }
 
 div a:last-of-type{	
@@ -316,6 +317,10 @@ transition: 0.25s opacity;
 	.grid__item--breakout {
 		margin-left: unset;
 		margin-right: unset;
+	}
+
+	.nav {
+		padding-right: calc(var(--space) * 1 );	
 	}
 
 }

@@ -1,7 +1,9 @@
 :root {
 	--space-scale: {{ settings.theme.theme_layout.space_scale or "100" }};
 	--color-text: {{ settings.theme.theme_colors.text or "#000000" }};
-  --color-link: {{ settings.theme.theme_colors.link or "#000000" }};
+	--color-textH: {{ settings.theme.theme_colors.textH or "#000000" }};
+	
+  	--color-link: {{ settings.theme.theme_colors.link or "#000000" }};
 	--color-background: {{ settings.theme.theme_colors.background or "#ffffff" }};
 	--font:
 	{% if (settings.theme.theme_typography.font == "system" or settings.theme.theme_typography.font == "") %}
@@ -14,20 +16,22 @@
 	--line-height-scale: {{ settings.theme.theme_typography.line_height_scale or "100" }};
   --transition-time: {{ settings.theme.theme_features.transition_duration or "300" }}ms;
 
---fontH:
+	--fontH:
 	{% if (settings.theme.theme_typography.fontH == "system" or settings.theme.theme_typography.fontH == "") %}
 		{{ settings.config.font_stack_system | safe }}
 	{% else %}
 		{{ settings.theme.theme_typography.fontH }}
 	{% endif %};
-  --fontH-weight: {{ settings.theme.theme_typography.font_weight or "400" }};
-  --fontH-scale: {{ settings.theme.theme_typography.font_scale or "100" }};
+  --fontH-weight: {{ settings.theme.theme_typography.fontH_weight or "400" }};
+  --fontH-scale: {{ settings.theme.theme_typography.fontH_scale or "100" }};
 
 
 }
 
 :root[dark] {
 	--color-text: {{ settings.theme.theme_colors.text_dark or "#ffffff" }};
-  --color-link: {{ settings.theme.theme_colors.link_dark or "#ffffff" }};
+	--color-textH: {{ settings.theme.theme_colors.textH_dark or "#ffffff" }};
+
+  	--color-link: {{ settings.theme.theme_colors.link_dark or "#ffffff" }};
 	--color-background: {{ settings.theme.theme_colors.background_dark or "#000000" }};
 }
