@@ -6,20 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="{{ settings.theme.theme_colors.background }}">
-
-  {# Shoelace #}
-  <link
-  rel="stylesheet"
-  media="(prefers-color-scheme:light)"
-  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css"
-  />
-  <link
-  rel="stylesheet"
-  media="(prefers-color-scheme:dark)"
-  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/dark.css"
-  onload="document.documentElement.classList.add('sl-theme-dark');"
-  />
-    
+  
   {# Set the SVG favicon for browsers that support it #}
   <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
 
@@ -49,6 +36,18 @@
     {% include "assets/css/theme.njk" %}
     {% include "assets/css/base.css" %}
   {% endset %}
+
+  <link
+  rel="stylesheet"
+  media="(prefers-color-scheme:light)"
+  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css"
+  />
+  <link
+  rel="stylesheet"
+  media="(prefers-color-scheme:dark)"
+  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/dark.css"
+  onload="document.documentElement.classList.add('sl-theme-dark');"
+  />
 
   <style>
     {% set googleFontSymbolUrl = "https://fonts.googleapis.com/css2?family=Inter&display=swap&text=↑→↓←" %}
