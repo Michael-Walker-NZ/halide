@@ -5,7 +5,7 @@ permalink: "/projects/residential.html"
 ---
 <article>
 
-  <header class="pb--4">
+  {# <header class="pb--4">
 
     <div class="grid grid--intro">
 
@@ -13,7 +13,7 @@ permalink: "/projects/residential.html"
 
     </div>
 
-  </header>
+  </header> #}
 
   {% set projectList = collections.residential | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectList.njk" %}

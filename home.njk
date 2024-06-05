@@ -5,39 +5,56 @@ permalink: "/index.html"
 ---
 <article>
 
-  <header class="pb--4">
+  {# <header class="pb--4">
 
     <div class="grid grid--intro">
 
-      <div class="grid__item--span-4 mw--readable markdown">{{ settings.metadata.site_description | renderUsingMarkdown | safe }}</div>
+      {# <div class="grid__item--span-4 mw--readable markdown">{{ settings.metadata.site_description | renderUsingMarkdown | safe }}</div> #}
 
-    </div>
+    {# </div> #}
 
-  </header>
+  {# </header> #}
 </article>
 
 <article class="pb--4">
 
-  <sl-carousel pagination navigation mouse-dragging loop autoplay id="slCarousel" style="--aspect-ratio:16/9;"> 
-  {# class="mxht"> #}
+  <sl-carousel pagination navigation mouse-dragging loop autoplay id="slCarousel"  class="mxht"> 
+  {# class="mxht"> style="--aspect-ratio:16/9" #}
+    {% set images = carousel_img.images %}
+    {% for image in images %}
     <sl-carousel-item>
-      <img
-        alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
-        src="/assets/images/Wwxg6PtHvK-1080.jpeg"
-      />
-    </sl-carousel-item>
-    <sl-carousel-item>
-      <img
-        alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
-        src="/assets/images/XYRmyBY5Q--1080.jpeg"
-      />
-    </sl-carousel-item>
-    <sl-carousel-item>
-      <img
-        alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
-        src="/assets/images/sr05clhPxe-1080.jpeg"
-      />
-    </sl-carousel-item>
+        {# Make an array of the enabled image formats from settings.yaml #}
+        {% set outputFormats = [] %}
+        {% for format, i in settings.images %}
+          {% if i.enabled === true %}
+            {{ '' if outputFormats.push(format) }}
+          {% endif %}
+        {% endfor %}
+
+        {# Create an object for our main project image parameters which we can then
+        destructure inside our shortcode function. See eleventy.js for what's going on #}
+        {% set params = 
+          {
+            "src": image.src,
+            "alt": image.caption or title,
+            "loadingType": "eager",
+            "viewportSizes": "(min-width: 540px) 90vw, 100vw",
+            "outputWidths": [ 
+              settings.config.image_width_md,
+              settings.config.image_width_lg
+            ],
+            "outputFormats": outputFormats,
+            "outputQualityJpeg": settings.images.jpeg.quality,
+            "outputQualityWebp": settings.images.webp.quality,
+            "outputQualityAvif": settings.images.avif.quality
+          }
+        %}
+
+        {# The image shortcode #}
+        {% generateImage params %}
+      </sl-carousel-item>
+
+      {% endfor %}
 
   </sl-carousel>
 
@@ -52,12 +69,12 @@ permalink: "/index.html"
 </article>
 
 <div class="grid grid--description">
-<h2 class="grid--section-title">About //</h2>
-  <div class="grid__item--span-4 mw--readable markdown pb--4">
-  
+<h2 class="grid--section-title">About ::</h2>
+<div class="grid__item--span-4 mw--readable markdown pb--4">
+ <h2 class="grid--section-spacer"> </h2> 
     <article>
       
-
+      
       <p>Nathaniel Miller Architecture is a small architectural practice specializing in design and documentation of projects varying from the smallest alterations to complex & bespoke designs.</p>
 
       <p>After graduating in 2007, Nathaniel spent 14 years working for several award-winning practices across the South Island including 9 years at Warren and Mahoney Architects. 
@@ -70,11 +87,10 @@ permalink: "/index.html"
 {# </div>
 
 <div class="grid grid--description"> #}
-<h2 class="grid--section-title">Services //</h2>
+<h2 class="grid--section-title">Services ::</h2>
   <div class="grid__item--span-4 mw--readable markdown">
+    <h2 class="grid--section-spacer"> </h2>
     <article>
-      
-      <ul>· Design and documentation</ul>
       <ul>· Residential - all types
         <a href="/projects/residential"><span class="arrow arrow--right"></span></a>
       </ul>
@@ -84,6 +100,7 @@ permalink: "/index.html"
       <ul>· Commercial
         <a href="/projects/commercial"><span class="arrow arrow--right"></span></a>
       </ul>
+      <ul>· Design and documentation</ul>      
       <ul>· Thermal modelling</ul> 
       <ul>· Sustainable design</ul>
       <ul>· Rendering</ul>

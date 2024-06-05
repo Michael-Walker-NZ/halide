@@ -44,7 +44,8 @@ theme:
     background: '#ffffff'
     text: '#101010'
     textH: '#4b4a4c'
-    link: '#542BFF'
+    link: '#101010'
+    # '#542BFF'
     # dark mode colors
     background_dark: '#101010'
     text_dark: '#c1c1c1'

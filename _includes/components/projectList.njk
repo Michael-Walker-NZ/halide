@@ -1,14 +1,14 @@
 {% if projectList | length %}
 
-	<section class="columns columns--projects">
+	<section class="grid grid--project ccolumns ccolumns--projects">
 
 		{% for project in projectList | reverse %}
 
-			<div class="columns__item mb--1">
+			<div class="grid__item ccolumns__item mb--1">
 
 				<a href="{{ project.url | url }}">
 
-					<figure>
+					<figure class="grid__fig">
 
 						{# Images are output in the order they appear in project frontmatter #}
       			{# and can be ordered in Tina CMS using drag and drop #}

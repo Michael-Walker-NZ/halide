@@ -215,13 +215,13 @@ module.exports = function(eleventyConfig) {
   });
 
   // Copy folders or static assets e.g. images to site output
-  eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/favicon.svg"});
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/@shoelace-style/shoelace/dist/themes/light.css": "assets/css/light.css",
-    "node_modules/@shoelace-style/shoelace/dist/themes/dark.css": "assets/css/dark.css",
-    "node_modules/@shoelace-style/shoelace/dist/components/carousel/carousel.js": "assets/js/carousel.js",
-    "node_modules/@shoelace-style/shoelace/dist/components/carousel-item/carousel-item.js": "assets/js/carousel-item.js"
-  });
+  eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/"});
+  // eleventyConfig.addPassthroughCopy({
+  //   "node_modules/@shoelace-style/shoelace/dist/themes/light.css": "assets/css/light.css",
+  //   "node_modules/@shoelace-style/shoelace/dist/themes/dark.css": "assets/css/dark.css",
+  //   "node_modules/@shoelace-style/shoelace/dist/components/carousel/carousel.js": "assets/js/carousel.js",
+  //   "node_modules/@shoelace-style/shoelace/dist/components/carousel-item/carousel-item.js": "assets/js/carousel-item.js"
+  // });
 
 
   // Disable 11ty dev server live reload when using CMS locally
