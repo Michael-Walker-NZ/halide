@@ -15,7 +15,7 @@ metadata:
   # footer contact email
   site_email: bo0yswbrp@mozmail.com
   # footer social link (the social title is defined in the i18n section)
-  site_social_url: 'https://www.linkedin.com/in/mike-walker-817b1038/'
+  site_social_url: 'https://nz.linkedin.com/in/nat-miller-46648b86'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
   # /assets/uploads/favicon.svg
@@ -72,7 +72,7 @@ theme:
 
   theme_features:
     # enables the dark mode toggle and detects the user's dark mode preference
-    enable_dark_mode: true
+    enable_dark_mode: false
     # max number of home page image grid items
     item_output_limit: 48
     # animations transition in milliseconds

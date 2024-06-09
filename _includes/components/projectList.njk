@@ -1,14 +1,14 @@
 {% if projectList | length %}
 
-	<section class="grid grid--project ccolumns ccolumns--projects">
+	<section class="grid grid--project2 ccolumns ccolumns--projects">
 
 		{% for project in projectList | reverse %}
-
-			<div class="grid__item ccolumns__item mb--1">
-
+ 
+			<div class="cgrid__item ccolumns__item grid__fig--wrapper mb--1" style="height: 220px">
+				<div></div>
 				<a href="{{ project.url | url }}">
 
-					<figure class="grid__fig">
+					<figure class="grid__fig--inner">
 
 						{# Images are output in the order they appear in project frontmatter #}
       			{# and can be ordered in Tina CMS using drag and drop #}
@@ -35,6 +35,7 @@
 							{
 								"src": image.src,
 								"alt": image.caption or title,
+								"classes": "grid__fig--img",
 								"loadingType": "eager" if (loop.first and section != "project") else "lazy",
 								"viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 45vw, 85vw",
 								"outputWidths": [
@@ -52,15 +53,22 @@
 						{# The image shortcode #}
 						{% generateImage params %}
 						
-						<figcaption class="pb--1{% if settings.theme.theme_features.show_project_grid_titles === false %} hide{% endif %}">
+						{# <figcaption class="pb--1{% if settings.theme.theme_features.show_project_grid_titles === false %} hide{% endif %}">
 
 							<span class="text--small arrow arrow--right">{{ project.data.title }}</span>
 
-						</figcaption>
+						</figcaption> #}
 
 					</figure>
-
 				</a>
+					<div>
+					<figcaption class="pb--1{% if settings.theme.theme_features.show_project_grid_titles === false %} hide{% endif %}">
+
+							<span class="text--small arrow arrow--right">{{ project.data.title }}</span>
+
+					</figcaption>
+					</div>
+				
 
 			</div>
 

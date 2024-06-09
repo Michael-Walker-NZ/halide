@@ -9,11 +9,11 @@ section: project
 
     <div class="grid grid--intro">
 
-      <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
-      <div class="grid__item--span-4 mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
+      <h1 class="grid__item--span-3 mw--readable">{{ title }}</h1>
+      <div class="grid__item--span-3 mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
         
       {% if year and settings.theme.theme_features.show_project_year %}
-        <p class="grid__item--span-4 mw--readable mb--0">
+        <p class="grid__item--span-3 mw--readable mb--0">
           {{ year }}
         </p>
       {% endif %}
@@ -70,7 +70,7 @@ section: project
 
   <section>
     <div class="grid grid--description pb--6">
-      <div class="grid__item--span-4 mw--readable">
+      <div class="grid__item--span-3 mw--readable">
         {{ layoutContent | safe }}
       </div>
     </div>
