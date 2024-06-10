@@ -1,7 +1,7 @@
 {
-  "name": "xarchstudio",
+  "name": "nma_nathaniel-miller-architecture",
   "version": "0.0.1",
-  "description": "xArch Studio is a new, minimalist, architecutural studio for residential connoisseurs",
+  "description": "NMA is minimalist, architecutural studio for residential connoisseurs",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",

@@ -78,6 +78,27 @@ export default defineConfig({
             description: "The year the project was realized e.g. 2023",
           },
           {
+            type: "string",
+            name: "tags",
+            label: "Tags",
+            description: "A tag describing the collection, used to create new category pages (and nav links))",
+            list: true,
+            options: [
+              {
+                value: 'alterations',
+                label: 'Alterations',
+              },
+              {
+                value: 'commercial',
+                label: 'Commercial',
+              },
+              {
+                value: 'residential',
+                label: 'Residential',
+              },
+            ],  
+          },
+          {
             type: "object",
             name: "images",
             label: "Images",
