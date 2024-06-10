@@ -118,7 +118,6 @@ export default defineConfig({
             name: "tags",
             label: "Tags",
             description: "A tag describing the collection, used to create new category pages (and nav links))",
-            list: true,
             options: [
               {
                 value: 'alterations',
