@@ -99,7 +99,7 @@ module.exports = function(eleventyConfig) {
 					width="${lowsrc.width}"
 					height="${lowsrc.height}"
 					alt="${alt}"
-          class="hover-fade"
+          class="hover-fade object-position"
 					loading="${loadingType}"
 					decoding="async">
 			  </picture>`;
