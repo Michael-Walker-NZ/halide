@@ -1,14 +1,12 @@
 # Carousel images
 images:
   - src: /assets/carousel/R-2104-5.jpg
-    caption: Sick Residential Building
+    caption: Bautiful Residential Building
   - src: /assets/carousel/R-2216-1.png
     caption: Lovely little number
   - src: /assets/carousel/Me-2.jpg
-    caption: Killing it in colur
+    caption: Killing it in colour
   - src: /assets/carousel/R-2208-2.jpg
     caption: Sweet residential house
-  - src: /assets/carousel/Me-3.jpg
-    caption: I draw little sketches all day
   - src: /assets/carousel/R-2304-2.png
     caption: Nice render

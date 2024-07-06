@@ -2,18 +2,17 @@
 
 	<div class="grid grid--footer">
 
-    <div class="grid__item">
+    {# <div class="grid__item">
       <span>&copy; {{ settings.metadata.site_title or "Site Title" }}</span>
-    </div>
+    </div> #}
 
     {% if settings.metadata.site_email %}
       <div class="grid__item">
-        <span class="pr--2">
-          <a  href="mailto:{{ settings.metadata.site_email }}">{{ settings.metadata.site_email }}</a>
-        </span>
-
-          
-        
+        <div class="pr--2">
+          E: <a  href="mailto:{{ settings.metadata.site_email }}">{{ settings.metadata.site_email }}</a>
+        </div>
+        <div>T: 0273038847
+        </div>
       </div>
     {% endif %}
 

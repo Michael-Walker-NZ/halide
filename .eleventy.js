@@ -122,6 +122,27 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => b.data.position - a.data.position);
   });
 
+  	// Get only content that matches a tag
+	eleventyConfig.addCollection("alterations", function (collectionApi) {
+		return collectionApi.getFilteredByTag("alterations")
+          //.filter(project => !Boolean(project.data.draft))
+          .sort((a, b) => b.data.position - a.data.position);
+	});
+
+  	// Get only content that matches a tag
+	eleventyConfig.addCollection("commercial", function (collectionApi) {
+		return collectionApi.getFilteredByTag("commercial")
+              //.filter(project => !Boolean(project.data.draft))
+    .sort((a, b) => b.data.position - a.data.position);
+	});
+
+  	// Get only content that matches a tag
+	eleventyConfig.addCollection("residential", function (collectionApi) {
+		return collectionApi.getFilteredByTag("residential")
+              //.filter(project => !Boolean(project.data.draft))
+    .sort((a, b) => b.data.position - a.data.position);
+	});
+
   // A filter to limit output of collection items
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);

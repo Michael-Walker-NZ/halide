@@ -5,15 +5,15 @@ section: project
 ---
 <article>
 
-  <header class="pb--4">
+  <header class="pb--1">
 
     <div class="grid grid--intro">
 
-      <h1 class="grid__item--span-3 mw--readable">{{ title }}</h1>
-      <div class="grid__item--span-3 mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
+      <h1 class="grid__item--span-3 mw--readable grid__item--end">{{ title }}</h1>
+      <div class="grid__item--span-3 mw--readable markdown grid__item--end">{{ description | renderUsingMarkdown | safe }}</div>
         
       {% if year and settings.theme.theme_features.show_project_year %}
-        <p class="grid__item--span-3 mw--readable mb--0">
+        <p class="grid__item--span-3 grid__item--end mw--readable mb--0">
           {{ year }}
         </p>
       {% endif %}
