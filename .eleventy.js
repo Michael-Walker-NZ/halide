@@ -78,6 +78,7 @@ module.exports = function(eleventyConfig) {
     });
 
     let lowsrc = metadata.jpeg[0];
+    let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
 
     let orientation;
 
@@ -96,8 +97,8 @@ module.exports = function(eleventyConfig) {
 			}).join("\n")}
 				<img
 					src="${lowsrc.url}"
-					width="${lowsrc.width}"
-					height="${lowsrc.height}"
+					width="${highsrc.width}"
+					height="${highsrc.height}"
 					alt="${alt}"
           class="hover-fade object-position"
 					loading="${loadingType}"

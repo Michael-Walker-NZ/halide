@@ -12,6 +12,9 @@
 	   -moz-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
 	        text-size-adjust: 100%;
+
+	/* Changes the shoelace variables */
+	--sl-spacing-medium: 0rem;
 }
 
 /* Resets */
@@ -316,7 +319,7 @@ transition: 0.25s opacity;
 }
 
 .pt {
-	padding-top: calc(var(--space) * 0.5 );
+	padding-top: calc(var(--space) * 1 );
 }
 
 .pb{

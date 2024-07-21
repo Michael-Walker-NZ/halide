@@ -16,9 +16,9 @@ permalink: "/index.html"
   {# </header> #}
 {# </article> #}
 
-<article class="pb--2">
+<article class="grid pb--2">
 
-  <sl-carousel pagination mouse-dragging loop autoplay id="slCarousel"  class="mxht"> 
+  <sl-carousel pagination mouse-dragging loop autoplay id="slCarousel"  class="mmxht grid__item grid__item--breakout"> 
   {# class="mxht"> style="--aspect-ratio:16/9" #}
     {% set images = carousel_img.images %}
     {% for image in images %}
@@ -38,10 +38,9 @@ permalink: "/index.html"
             "src": image.src,
             "alt": image.caption or title,
             "loadingType": "eager",
-            "viewportSizes": "(min-width: 540px) 90vw, 100vw",
+            "viewportSizes": "100vw",
             "outputWidths": [ 
-              settings.config.image_width_md,
-              settings.config.image_width_lg
+                            settings.config.image_width_lg
             ],
             "outputFormats": outputFormats,
             "outputQualityJpeg": settings.images.jpeg.quality,
