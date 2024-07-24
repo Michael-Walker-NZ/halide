@@ -8,9 +8,10 @@ section: project
   <header class="pb--1">
 
     <div class="grid grid--intro">
-
+      
       <h1 class="grid__item--span-3 mw--readable grid__item--end">{{ title }}</h1>
-      <div class="grid__item--span-3 mw--readable markdown grid__item--end">{{ description | renderUsingMarkdown | safe }}</div>
+      <div class="grid__item--span-3 grid__item--end mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
+      {# <div class="grid__item--span-3 grid__item--end mw--readable markdown">{{ description | safe }}</div> #}
         
       {% if year and settings.theme.theme_features.show_project_year %}
         <p class="grid__item--span-3 grid__item--end mw--readable mb--0">

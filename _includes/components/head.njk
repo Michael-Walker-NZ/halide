@@ -56,8 +56,6 @@
       {% set googleFontUrl = "https://fonts.googleapis.com/css2?family=" + settings.theme.theme_typography.font | formatGoogleFontName or 'Inter' + "&display=swap" %}
       {% googleFontsCss googleFontUrl %}
     {%- endif -%}
-    {{ css | cssmin | safe }}
-
     {%- if (settings.theme.theme_typography.fontH != "system" and settings.theme.theme_typography.fontH != "") -%}
       {% set googleFontUrlH = "https://fonts.googleapis.com/css2?family=" + settings.theme.theme_typography.fontH | formatGoogleFontName or 'Inter' + "&display=swap" %}
       {% googleFontsCss googleFontUrlH %}
