@@ -326,6 +326,10 @@ transition: 0.25s opacity;
 	padding-bottom: calc(var(--space) * 4 );
 }
 
+sl-carousel::part(pagination) {
+	padding-top: calc(var(--space) * 0.25 );
+  }
+
 /* Navigational Arrows */
 
 .arrow {
@@ -403,13 +407,9 @@ transition: 0.25s opacity;
 		padding-right: calc(var(--space) * 2 );
 	}
 	
-	/* .pt {
-		padding-top: calc(var(--space) * 2 );
-	} */
-
-	/* .pb{
-		padding-bottom: calc(var(--space) * 8 );
-	} */
+	sl-carousel::part(pagination) {
+		padding-top: calc(var(--space) * 0.5 );
+	}
 }
 
 /* Small Desktop Breakpoint */
